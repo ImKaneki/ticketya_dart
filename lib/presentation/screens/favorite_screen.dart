@@ -23,8 +23,8 @@ class FavoriteScreen extends StatelessWidget {
                 final agency = favorites[index];
                 return ListTile(
                   leading: const CircleAvatar(
-                    backgroundImage: NetworkImage(
-                        'https://placehold.co/200x200.png'),
+                    backgroundImage:
+                        NetworkImage('https://placehold.co/200x200.png'),
                     maxRadius: 28,
                   ),
                   title: Text(
@@ -32,13 +32,14 @@ class FavoriteScreen extends StatelessWidget {
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  subtitle: Text(agency.services!,
+                  subtitle: Text(
+                    agency.services!,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
                   trailing: IconButton(
                     onPressed: () {
-                      provider.toogleFavorite(agency.id);
+                      provider.toogleFavorite(ticketya.id);
                     },
                     icon: const Icon(Icons.favorite),
                   ),
