@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:voygo/data/models/agency.dart';
+import 'package:ticketya/data/models/company.dart';
 
-import '../../logic/providers/agency_provider.dart';
+import '../../logic/providers/company_provider.dart';
 
-class AgencyWidget extends StatelessWidget {
-  final Agency agency;
+class CompanyWidget extends StatelessWidget {
+  final Company company;
 
-  const AgencyWidget({super.key, required this.agency});
+  const CompanyWidget({super.key, required this.company});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class AgencyWidget extends StatelessWidget {
       margin: EdgeInsets.zero,
       child: InkWell(
         onTap: () {
-          provider.toogleFavorite(agency.id);
+          provider.toogleFavorite(company.id);
         },
         // onTap: () => context.go('/show/${agency.id}'),
         child: Column(
@@ -45,7 +45,7 @@ class AgencyWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
-                    agency.companyName,
+                    company.companyName,
                     style: Theme.of(context).textTheme.titleSmall,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
@@ -54,11 +54,11 @@ class AgencyWidget extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        agency.location!,
+                        company.location!,
                         style: Theme.of(context).textTheme.bodySmall,
                       ),
                       Spacer(),
-                      Icon(provider.isFavorite(agency.id) ? Icons.favorite : Icons.favorite_outline),
+                      Icon(provider.isFavorite(company.id) ? Icons.favorite : Icons.favorite_outline),
                     ],
                   ),
                 ],

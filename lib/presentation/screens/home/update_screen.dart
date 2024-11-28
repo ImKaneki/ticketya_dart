@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
-import '../../../data/models/agency.dart';
-import '../../../logic/providers/agency_provider.dart';
+import '../../../data/models/company.dart';
+import '../../../logic/providers/company_provider.dart';
 
 class UpdateScreen extends StatefulWidget {
   final Agency agency;
@@ -30,23 +30,25 @@ class _UpdateScreenState extends State<UpdateScreen> {
   final avatarController = TextEditingController();
   final locationController = TextEditingController();
   final categoryController = TextEditingController();
+  final placeController = TextEditingController();
 
   @override
   void initState() {
     rucController.text = widget.agency.ruc;
     companyNameController.text = widget.agency.companyName;
-    // addressController.text = widget.agency.address!;
-    // referenceController.text = widget.agency.reference!;
-    // emailController.text = widget.agency.email!;
-    // servicesController.text = widget.agency.services!;
-    // descriptionController.text = widget.agency.description!;
-    // cellPhoneNumberController.text = widget.agency.cellPhoneNumber!;
-    // schedulesController.text = widget.agency.schedules!;
-    // attentionTimeController.text = widget.agency.attentionTime!;
-    // frontPageController.text = widget.agency.frontPage!;
-    // avatarController.text = widget.agency.avatar!;
-    // locationController.text = widget.agency.location!;
-    // categoryController.text = widget.agency.categoryId as String;
+    // addressController.text = widget.company.address!;
+    // referenceController.text = widget.company.reference!;
+    // emailController.text = widget.company.email!;
+    // servicesController.text = widget.company.services!;
+    // descriptionController.text = widget.company.description!;
+    // cellPhoneNumberController.text = widget.company.cellPhoneNumber!;
+    // schedulesController.text = widget.company.schedules!;
+    // attentionTimeController.text = widget.company.attentionTime!;
+    // frontPageController.text = widget.company.frontPage!;
+    // avatarController.text = widget.company.avatar!;
+    // locationController.text = widget.company.location!;
+    // categoryController.text = widget.company.categoryId as String;
+    // placeController.text = widget.company.reference!;
     super.initState();
   }
 
@@ -66,6 +68,7 @@ class _UpdateScreenState extends State<UpdateScreen> {
     avatarController.dispose();
     locationController.dispose();
     categoryController.dispose();
+    placeController.dispose();
     super.dispose();
   }
 
@@ -75,7 +78,7 @@ class _UpdateScreenState extends State<UpdateScreen> {
 
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
-          content: Text('Agencia modificado'),
+          content: Text('Empresa modificado'),
         ),
       );
     }
@@ -83,7 +86,7 @@ class _UpdateScreenState extends State<UpdateScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final agencyProvider = Provider.of<AgencyProvider>(context);
+    final companyProvider = Provider.of<AgencyProvider>(context);
 
     return Scaffold(
       appBar: AppBar(

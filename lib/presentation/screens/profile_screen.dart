@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
-import 'package:voygo/logic/providers/module_provider.dart';
-import 'package:voygo/presentation/widgets/colors_widget.dart';
-import 'package:voygo/presentation/widgets/module_widget.dart';
+import 'package:ticketya/logic/providers/module_provider.dart';
+import 'package:ticketya/presentation/widgets/colors_widget.dart';
+import 'package:ticketya/presentation/widgets/module_widget.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});

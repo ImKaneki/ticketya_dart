@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:voygo/data/models/agency.dart';
+import 'package:ticketya/data/models/company.dart';
 
 import '../../data/models/favorite.dart';
 
 class FavoriteWidget extends StatelessWidget {
   final Favorite favorite;
-  final Agency agency;
+  final Company company;
 
   const FavoriteWidget({
     super.key,
     required this.favorite,
-    required this.agency,
+    required this.company,
   });
 
   @override
@@ -25,7 +25,7 @@ class FavoriteWidget extends StatelessWidget {
         ),
       ),
       title: Text(
-        agency.companyName,
+        company.companyName,
         maxLines: 1,
         overflow: TextOverflow.ellipsis,
       ),
@@ -41,7 +41,7 @@ class FavoriteWidget extends StatelessWidget {
         // onPressed: () => favoriteProvider.delete(favorite.id!),
         icon: const Icon(Icons.favorite),
       ),
-      onTap: () => context.go('/show/${agency.id}'),
+      onTap: () => context.go('/show/${company.id}'),
     );
   }
 }
