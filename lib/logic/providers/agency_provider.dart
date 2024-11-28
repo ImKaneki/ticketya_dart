@@ -4,7 +4,7 @@ import '../../data/repositories/agency_repository.dart';
 import '../../data/repositories/agency_repository_impl.dart';
 import '../../data/repositories/favorite_repository.dart';
 
-import '../../data/models/agency.dart';
+import '../../data/models/company.dart';
 import '../../data/models/favorite.dart';
 import '../../data/repositories/favorite_repository_impl.dart';
 

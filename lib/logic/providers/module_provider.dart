@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:voygo/data/models/module.dart';
-import 'package:voygo/data/repositories/module_repository.dart';
-import 'package:voygo/data/repositories/module_repository_impl.dart';
+import 'package:ticketya/data/models/module.dart';
+import 'package:ticketya/data/repositories/module_repository.dart';
+import 'package:ticketyadata/repositories/module_repository_impl.dart';
 
 class ModuleProvider  with ChangeNotifier{
   final ModuleRepository _repository = ModuleRepositoryImpl();

@@ -19,13 +19,13 @@ class DbHelper {
   }
 
   Future<Database> _initDatabase() async {
-    String path = join(await getDatabasesPath(), 'bd_agencias_de_turismos.db');
+    String path = join(await getDatabasesPath(), 'bd_tickets_digitales.db');
     return await openDatabase(
       path,
       version: 1,
       onCreate: (db, version)  async{
-        await _executeSqlFile(db, 'assets/sql/ddl_agencias_de_turismos.sql');
-        await _executeSqlFile(db, 'assets/sql/dml_agencias_de_turismos.sql');
+        await _executeSqlFile(db, 'assets/sql/ddl_tickets_digitales.sql');
+        await _executeSqlFile(db, 'assets/sql/dml_tickets_digitales.sql');
       },
     );
   }

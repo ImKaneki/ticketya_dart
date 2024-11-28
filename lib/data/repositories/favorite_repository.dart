@@ -1,4 +1,4 @@
-import 'package:voygo/data/models/favorite.dart';
+import 'package:ticketya/data/models/favorite.dart';
 
 abstract class FavoriteRepository {
   Future<List<int>> getAll();

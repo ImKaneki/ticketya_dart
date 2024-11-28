@@ -1,4 +1,4 @@
-import '../models/agency.dart';
+import '../models/company.dart';
 import '../models/category.dart';
 import '../models/favorite.dart';
 import '../models/module.dart';
@@ -27,7 +27,7 @@ List<Category> categorias = [
   Category(id: 9, name: 'Naturaleza'),
 ];
 
-List<Agency> agencias = [
+List<Company> agencias = [
   // Agency(
   //   id: 1,
   //   ruc: '20100912768',

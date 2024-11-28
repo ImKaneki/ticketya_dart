@@ -37,7 +37,7 @@ class Agency {
 
   @override
   String toString() {
-    return 'Agency(id: $id, ruc: $ruc, companyName: $companyName, address: $address, reference: $reference, email: $email, services: $services, description: $description, cellPhoneNumber: $cellPhoneNumber, schedules: $schedules, attentionTime: $attentionTime, frontPage: $frontPage, avatar: $avatar, location: $location, joinedDate: $joinedDate, categoryId: $categoryId)';
+    return 'Company(id: $id, ruc: $ruc, companyName: $companyName, address: $address, reference: $reference, email: $email, services: $services, description: $description, cellPhoneNumber: $cellPhoneNumber, schedules: $schedules, attentionTime: $attentionTime, frontPage: $frontPage, avatar: $avatar, location: $location, joinedDate: $joinedDate, categoryId: $categoryId)';
   }
 
   Map<String, dynamic> toMap() {
@@ -58,6 +58,7 @@ class Agency {
       'location': location,
       'joined_date': joinedDate?.millisecondsSinceEpoch,
       'category_id': categoryId,
+ //     'place_id': place_id,
     };
   }
 
@@ -79,6 +80,7 @@ class Agency {
       location: map['location'] != null ? map['location'] as String : null,
       joinedDate: map['joined_date'] != null ? DateTime.parse(map['joined_date']) : null,
       categoryId: map['category_id'] as int,
+//      place: map['company_name'] as String,
     );
   }
 

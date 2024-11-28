@@ -11,7 +11,7 @@ class CompanyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final provider = Provider.of<AgencyProvider>(context);
+    final provider = Provider.of<CompanyProvider>(context);
 
     return Card.outlined(
       color: Colors.transparent,

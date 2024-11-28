@@ -1,4 +1,4 @@
-import 'package:voygo/data/models/agency.dart';
+import 'package:ticketya/data/models/company.dart';
 
 abstract class AgencyRepository {
   Future<List<Agency>> getAll();
