@@ -9,7 +9,7 @@ import '../../data/models/favorite.dart';
 import '../../data/repositories/favorite_repository_impl.dart';
 
 class AgencyProvider with ChangeNotifier {
-  final AgencyRepository _agencyRepository = AgencyRepositoryImpl();
+  final AgencyRepository _agencyRepository = CompanyRepositoryImpl();
   final FavoriteRepository _favoriteRepository = FavoriteRepositoryImpl();
 
   List<Agency> _agencies = [];
