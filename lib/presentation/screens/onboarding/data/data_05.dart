@@ -6,19 +6,21 @@ final List<OnboardingModel> data05 = [
   OnboardingModel(
     color: Colors.indigo.shade100,
     image: '01.jpg',
-    title: 'Explora Agencias de Viajes',
-    description: "Encuentra tu próxima compra en solo unos toques.",
+    title: 'Obtiene Tickets de Viajes',
+    description:
+        "Encuentra los mejores tickets de viaje para tu próxima aventura",
   ),
   OnboardingModel(
     color: Colors.orange.shade100,
     image: '02.jpg',
-    title: 'Elige la Mejor Opción',
-    description: "Elige la opción que mejor se adapte a tus necesidades y presupuesto.",
+    title: 'Elige los Mejores Tickets',
+    description: "Elige el ticket adecuado a tus necesidades y presupuesto.",
   ),
   OnboardingModel(
     color: Colors.blue.shade100,
     image: '03.jpg',
-    title: 'Compra Fácil y Rápido',
-    description: "Reserva tus proximos tickets en segundos y empieza a automatizar respuetas",
+    title: 'Reserva tus tickets en segundos',
+    description:
+        "Reserva tus proximos tickets en segundos y empieza a automatizar respuetas",
   ),
 ];

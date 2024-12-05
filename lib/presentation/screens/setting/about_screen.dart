@@ -69,7 +69,7 @@ class AboutScreen extends StatelessWidget {
                       style: Theme.of(context).textTheme.titleSmall,
                       children: <TextSpan>[
                         TextSpan(
-                          text: 'Estudiante 01',
+                          text: 'Jose Garriazo Auccasi',
                           style: Theme.of(context).textTheme.bodyMedium,
                         ),
                       ],
@@ -78,12 +78,12 @@ class AboutScreen extends StatelessWidget {
                   const SizedBox(height: 8.0),
                   RichText(
                     text: TextSpan(
-                      text: 'Equipo de Desarrollo: ',
+                      text: 'Equipo de Desarrollo:  ',
                       style: Theme.of(context).textTheme.titleSmall,
                       children: <TextSpan>[
                         TextSpan(
                           text:
-                              'Estudiante 02, Estudiante 03, Estudiante 04, Estudiante 05',
+                              'Eber Roman Pumachahua, Ruth Castillo Huamani, Ronny Roman Astoyauri, Rocio Lobo Jacinto',
                           style: Theme.of(context).textTheme.bodyMedium,
                         ),
                       ],

@@ -54,7 +54,7 @@ VALUES
 ("201886127120", "Marvisur", "https://www.expresomarvisur.com/assets/images/portadasucursalesnuevo.png", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4eNw9vgR-Fep5-adyt-BQHQtGBLk-LqQZjA&s", 9);
 ("10221823198", "radio la caribeña","https://i1.sndcdn.com/artworks-000075328834-zlzp47-t1080x1080.jpg","https://static.wikia.nocookie.net/logopedia/images/6/6b/Radio_Karibe%C3%B1a.svg/revision/latest/scale-to-width-down/300?cb=20220809154135&path-prefix=es",10)
 ("10221823198", "radio puquio","","https://radiopuquio.pe/images/logo%20radio%20puquio%20ok.png?crc=4271882853",11)
-("","ticket master","","",12)
+("20608541404","ticket master","","",12)
 ("","LATAM Airlines","","",13)
 ("","Aerolíneas Argentinas","","",14)
 ("","Easy Taxi / Cabify / Uber","","",15)
