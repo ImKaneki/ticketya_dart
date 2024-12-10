@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key});
+
+  void openUrl(String url) async {
+    final Uri uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(
+        uri,
+        mode: LaunchMode.externalApplication,
+      );
+    } else {
+      throw 'No se puede abrir $url';
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +32,7 @@ class AboutScreen extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Narmeshit',
+                    'Ticketya',
                     style: Theme.of(context).textTheme.titleMedium,
                   ),
                   const Text('Diseño & Equipo creativo'),
@@ -30,7 +43,7 @@ class AboutScreen extends StatelessWidget {
                 clipBehavior: Clip.hardEdge,
                 margin: EdgeInsets.zero,
                 child: Image.asset(
-                  'assets/about/portada.jpg',
+                  'assets/about/https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqdITKmviLse-2yKen5sKFwP9g0TxQ8AcjTkriIqRjJRYkpMl3F8hMWn9OUi5mSzESnVIgLFUSYQBdo2z-ajEV1hoL7smCOFr20438AyAkohh81tVzBaQRaNOS4H0R4CQAqPtDyugOgXrrWBKMHBv1dhcgMXK-nsvUaIbSgT1AgtZhF9Cz-E8nQS-mNUUi/s320/imagen_2024-12-08_200840597.png',
                   height: 250,
                   fit: BoxFit.cover,
                 ),
@@ -43,7 +56,7 @@ class AboutScreen extends StatelessWidget {
                     margin: EdgeInsets.zero,
                     clipBehavior: Clip.hardEdge,
                     child: Image.asset(
-                      'assets/vendors/logo.png',
+                      'assets/vendors/https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjWg_NxgG89838kxoPR42W2rJ-fVssJOjEnvDn7P1w21u_Mn4-CutVdhzBcDvweH1n85iFy7yHPBh3E_9yAyF8hJsdGBD2SUNo-j_eO9NRi-HdRpm30nk5eWnB9d4NlwE5DohO8CnhwuWbhw971mtZNj432sXRYqMv4tmVzqxR4zzewiYDsgSB157VclcNt/s1600/WhatsApp%20Image%202024-12-08%20at%207.21.29%20PM.jpeg',
                       height: 60,
                     ),
                   ),
@@ -54,7 +67,7 @@ class AboutScreen extends StatelessWidget {
                   // ),
                   const SizedBox(height: 8.0),
                   Text(
-                    'Version: 1.0',
+                    'Version: 0.1',
                     style: Theme.of(context).textTheme.bodySmall,
                   ),
                   const SizedBox(height: 24.0),
@@ -63,32 +76,7 @@ class AboutScreen extends StatelessWidget {
                     style: Theme.of(context).textTheme.titleMedium,
                   ),
                   const SizedBox(height: 8.0),
-                  RichText(
-                    text: TextSpan(
-                      text: 'Scrum Master: ',
-                      style: Theme.of(context).textTheme.titleSmall,
-                      children: <TextSpan>[
-                        TextSpan(
-                          text: 'Jose Garriazo Auccasi',
-                          style: Theme.of(context).textTheme.bodyMedium,
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(height: 8.0),
-                  RichText(
-                    text: TextSpan(
-                      text: 'Equipo de Desarrollo:  ',
-                      style: Theme.of(context).textTheme.titleSmall,
-                      children: <TextSpan>[
-                        TextSpan(
-                          text:
-                              'Eber Roman Pumachahua, Ruth Castillo Huamani, Ronny Roman Astoyauri, Rocio Lobo Jacinto',
-                          style: Theme.of(context).textTheme.bodyMedium,
-                        ),
-                      ],
-                    ),
-                  ),
+                  const Text('Aplicación base UI Kits - 2024'),
                 ],
               ),
             ],
@@ -104,13 +92,14 @@ class AboutScreen extends StatelessWidget {
           children: [
             const Text('Siguenos en:'),
             GestureDetector(
-              onTap: () {},
+              onTap: () => openUrl(
+                  'https://facebook.com/people/Narmeshit/61557356108015/'),
               child: const CircleAvatar(
                 backgroundImage: AssetImage('assets/social/facebook.png'),
               ),
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () => openUrl('https://instagram.com/narmeshit'),
               child: const CircleAvatar(
                 backgroundImage: AssetImage('assets/social/instagram.png'),
               ),
@@ -122,25 +111,25 @@ class AboutScreen extends StatelessWidget {
               ),
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () => openUrl('https://twitter.com/narmeshit'),
               child: const CircleAvatar(
                 backgroundImage: AssetImage('assets/social/twitter.png'),
               ),
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () => openUrl('https://www.youtube.com/@narmeshit'),
               child: const CircleAvatar(
                 backgroundImage: AssetImage('assets/social/youtube.png'),
               ),
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () => openUrl('https://dribbble.com/jdccoyllor'),
               child: const CircleAvatar(
                 backgroundImage: AssetImage('assets/social/dribbble.png'),
               ),
             ),
             GestureDetector(
-              onTap: () {},
+              onTap: () => openUrl('https://github.com/narmeshit'),
               child: const CircleAvatar(
                 backgroundImage: AssetImage('assets/social/github.png'),
                 backgroundColor: Colors.white,

@@ -28,24 +28,21 @@ class FaqsScreen extends StatelessWidget {
 
   final List<FAQItem> faqItems2 = [
     FAQItem(
-      question: "¿Cómo crear una cuentaaw?",
+      question: "¿Cómo reservar tickets?",
       answer:
-          "Para crear una cuenta, ve a la pantalla de registro y sigue los pasos indicados.",
+          "Para reservar el tickets de la empresa que desea solo debe hacr clic en el boton AQUIRIR.",
     ),
     FAQItem(
-      question: "¿Cómo restablecer mi contraseñarqwr?",
-      answer:
-          "Para restablecer tu contraseña, haz clic en '¿Olvidaste tu contraseña?' en la pantalla de inicio de sesión.",
+      question: "¿Que metodos de pago aceptan?",
+      answer: "Se aceptan: Yape, BCP y Interbank.",
     ),
     FAQItem(
-      question: "¿Cómo actualizar mis datos personalesrqwr?",
-      answer:
-          "Ve a la sección de configuración y selecciona 'Editar perfil' para actualizar tus datos.",
+      question: "¿Cual es su politica de cancelacion y reembolso?",
+      answer: "Establecer expectativas y límites con los clientes.",
     ),
     FAQItem(
-      question: "¿Cómo eliminar mi cuentarqwr?",
-      answer:
-          "Si deseas eliminar tu cuenta, por favor contacta a soporte técnico para asistencia.",
+      question: "¿Que sucede si hay un error?",
+      answer: "Dirigirse a nuestras redes sociales y contactarnos.",
     ),
   ];
 
@@ -62,7 +59,7 @@ class FaqsScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Título General 1',
+                'Sobre la app',
                 style: Theme.of(context).textTheme.titleMedium,
               ),
               const SizedBox(height: 16.0),
@@ -86,7 +83,7 @@ class FaqsScreen extends StatelessWidget {
               ),
               const SizedBox(height: 24.0),
               Text(
-                'Título General 2',
+                'Sobre la empresa',
                 style: Theme.of(context).textTheme.titleMedium,
               ),
               const SizedBox(height: 16.0),
